@@ -1,0 +1,179 @@
+﻿@*
+ * This file is part of Gestor Documental para la Universidad Autónoma de Guadalajara Campus Tabasco.
+ * Copyright (c) 2016, José Manuel Placeres Castro
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.   
+ *@
+
+@model Gestor_Documental.Models.Entidades.Usuario
+@{
+ViewBag.Title = "Editar Usuario";
+Layout = "~/Views/Shared/_Layout.cshtml";
+var controlador = ViewContext.RouteData.Values["controller"].ToString();
+var accion = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<script src="~/Scripts/Catalogos/UsuarioNuevoEditar.js"></script>
+@if (ViewBag.validacionDeDatos != null && ViewBag.validacionDeDatos["Error"] == true)
+{
+    <script type="text/javascript">
+     var validacionDeAlias = "@ViewBag.validacionDeDatos["Alias"]";
+     var validacionDeNombre = "@ViewBag.validacionDeDatos["Nombre"]";
+     $(document).ready(function () {
+         MensajeError(validacionDeAlias, validacionDeNombre);
+     });
+    </script>
+}
+@{
+ViewBag.validacionDeDatos = null;
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#divPass").toggle();
+        $("#btnCambiarPass").click(function () {
+            if ($("#changePassword").val() == "true") {
+                $("#changePassword").val("false");
+            } else {
+                $("#changePassword").val("true");
+            }
+            $("#divPass").toggle();
+        });
+});
+</script>
+
+<div id="divTool" class="navbar">
+    <div class="navbar-inner">
+        <a href="/@controlador" class="btn btn-info pull-left" style="margin-left: -10px;"><i class="icon-arrow-left" style="margin-top: 3px;"></i> Regresar</a>
+        <a id="btnGuardar" class="btn btn-success">Guardar</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <section id="UsuarioForm">
+            @using (Html.BeginForm(accion, controlador, FormMethod.Post, new { id = "frmUsuario" }))
+            {
+                @Html.HiddenFor(model => model.IdUsuario)
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Alias, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Alias, new { @class = "span2", @maxlength = "10" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Nombre, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Nombre, new { @class = "span5", @maxlength = "512" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="IdGrupo">Grupo</label>
+                    <div class="col-md-10">
+                        <select id="cboxGrupo" name="IdGrupo" class="form-control">
+                            <option value="0">Seleccione...</option>
+                            @if (ViewBag.Grupo != null)
+                            {
+                                foreach (var grupo in ViewBag.Grupo as List<Gestor_Documental.Models.Entidades.Grupo>)
+                                {
+                                    <option value="@(grupo.IdGrupo)" @(grupo.IdGrupo == Model.IdGrupo ? "selected='selected'" : "")>@(grupo.Nombre)</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="IdDepartamento">Departamento</label>
+                    <div class="col-md-10">
+                        <select id="cboxDepartamento" name="IdDepartamento" class="form-control">
+                            <option value="0">Seleccione...</option>
+                            @if (ViewBag.Departamento != null)
+                            {
+                                foreach (var depa in ViewBag.Departamento as List<Gestor_Documental.Models.Entidades.Departamento>)
+                                {
+                                    <option value="@(depa.IdDepartamento)" @(depa.IdDepartamento == Model.IdDepartamento ? "selected='selected'" : "")>@(depa.Nombre)</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="IdArea">Area</label>
+                    <div class="col-md-10">
+                        <select id="cboxArea" name="IdArea" class="form-control">
+                            <option value="0">Seleccione...</option>
+                            @if (ViewBag.Area != null)
+                            {
+                                foreach (var area in ViewBag.Area as List<Gestor_Documental.Models.Entidades.Area>)
+                                {
+                                    <option value="@(area.IdArea)" @(area.IdArea == Model.IdArea ? "selected='selected'" : "")>@(area.Nombre)</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="IdGrupoLector" style="margin-bottom: 0px;">Grupo Lector</label>
+                    <div class="col-md-10">
+                        <select id="cboxGrupoLector" name="IdGrupoLector" class="form-control">
+                            <option value="0">Seleccione...</option>
+                            @if (ViewBag.GrupoLector != null)
+                            {
+                                foreach (var grupoLector in ViewBag.GrupoLector as List<Gestor_Documental.Models.Entidades.GrupoLector>)
+                                {
+                                    <option value="@(grupoLector.IdGrupoLector)" @(grupoLector.IdGrupoLector == Model.IdGrupoLector ? "selected='selected'" : "")>@(grupoLector.Nombre)</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <a id="btnCambiarPass" class="btn btn-success">Cambiar Password</a>
+                </div>
+                <div id="divPass">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(model => model.Password, new { @class = "span5", @maxlength = "512" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="ConfimrPassword">Confirme Password</label>
+                        <div class="col-md-10">
+                            <input type="password" name="ConfirmPassword" class="span5" id="ConfirmPassword" maxlength="512" value="" />
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="changePassword" id="changePassword" value="false" />
+            }
+        </section>
+    </div>
+</div>
+
+<div class="modal fade" role="dialog" id="mdlError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Index</h4>
+            </div>
+            <div class="modal-body">
+                <p id="errorDetalle"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</a>
+            </div>
+        </div>
+    </div>
+</div>

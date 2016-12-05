@@ -1,0 +1,88 @@
+﻿@*
+ * This file is part of Gestor Documental para la Universidad Autónoma de Guadalajara Campus Tabasco.
+ * Copyright (c) 2016, José Manuel Placeres Castro
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.   
+ *@
+
+@model Gestor_Documental.Models.Entidades.Departamento
+@{
+ViewBag.Title = "Editar Departamento";
+Layout = "~/Views/Shared/_Layout.cshtml";
+var controlador = ViewContext.RouteData.Values["controller"].ToString();
+var accion = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<script src="~/Scripts/Catalogos/DepartamentoNuevoEditar.js"></script>
+@if (ViewBag.validacionDeDatos != null && ViewBag.validacionDeDatos["Error"] == true)
+{
+    <script type="text/javascript">
+        var validacionDeNombre = "@ViewBag.validacionDeDatos["Nombre"]";
+        var validacionDeClave = "@ViewBag.validacionDeDatos["Clave"]";
+
+         $(document).ready(function () {
+             MensajeError(validacionDeNombre, validacionDeClave);
+         });
+    </script>
+}
+@{
+ViewBag.validacionDeDatos = null;
+}
+
+<div id="divTool" class="navbar">
+    <div class="navbar-inner">
+        <a href="/@controlador" class="btn btn-info pull-left" style="margin-left: -10px;"><i class="icon-arrow-left" style="margin-top: 3px;"></i> Regresar</a>
+        <a id="btnGuardar" class="btn btn-success">Guardar</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <section id="DepartamentoForm">
+            @using (Html.BeginForm(accion, controlador, FormMethod.Post, new { id = "frmDepartamento" }))
+            {
+                @Html.HiddenFor(model => model.IdDepartamento)
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Nombre, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Nombre, new { @class = "span5", @maxlength = "512" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Clave, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Clave, new { @class = "span5", @maxlength = "4" })
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
+
+<div class="modal fade" role="dialog" id="mdlError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Index</h4>
+            </div>
+            <div class="modal-body">
+                <p id="errorDetalle"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</a>
+            </div>
+        </div>
+    </div>
+</div>

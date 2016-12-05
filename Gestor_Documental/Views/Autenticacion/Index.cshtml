@@ -1,0 +1,134 @@
+﻿@*
+ * Portions based on the template startbootstrap-sb-admin-2, Copyright (c) 2013-2016 Blackrock Digital LLC., see LICENSES.txt.
+ *
+ * This file is part of Gestor Documental para la Universidad Autónoma de Guadalajara Campus Tabasco.
+ * Copyright (c) 2016, José Manuel Placeres Castro
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.   
+ *@
+
+@model Gestor_Documental.Models.Entidades.Usuario
+@{
+    ViewBag.Title = "Ingresar";
+    Layout = null;
+    var controlador = ViewContext.RouteData.Values["controller"].ToString();
+    var accion = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/startbootstrap-sb-admin2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="~/Content/startbootstrap-sb-admin2/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/Content/startbootstrap-sb-admin2/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Content/startbootstrap-sb-admin2/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- jQuery -->
+    <script src="~/Content/startbootstrap-sb-admin2/vendor/jquery/jquery-1.12.4.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/startbootstrap-sb-admin2/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Content/startbootstrap-sb-admin2/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/startbootstrap-sb-admin2/dist/js/sb-admin-2.js"></script>
+
+    <script src="~/Scripts/Autenticacion/AutenticacionIndex.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Inicie Sesión</h3>
+                </div>
+                <div class="panel-body">
+                    <section id="loginForm">
+                        @using (Html.BeginForm(accion, controlador, FormMethod.Post, new { id = "frmLogIn" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <h4>Ingrese con su usuario.</h4>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Alias, new { @class = "col-md-4 control-label" })
+                                <div class="col-md-8">
+                                    @Html.TextBoxFor(m => m.Alias, new { @class = "sapn2 form-control" })
+                                    @Html.ValidationMessageFor(m => m.Alias, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="Password" style="padding-top:10px !important;">Contraseña</label>
+                                <div class="col-md-8" style="padding-top:10px !important;">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "span2 form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                               <div class="col-md-offset-2 col-md-10">
+                               <div class="checkbox">
+                               @Html.CheckBoxFor(m => m.RememberMe)
+                               @Html.LabelFor(m => m.RememberMe)
+                               </div>
+                               </div>
+                               </div>*@
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-10" style="padding-top:20px !important;">
+                                    <a id="btnLogIn" class="btn btn-success">Iniciar Sesión</a>
+                                </div>
+                            </div>
+                            @* TODO habilitar cuando/si este la funcionalidad resetear password.
+                               <p>
+                               @Html.ActionLink("¿Olvidó su contraseña?", "ForgotPassword")
+                               </p>*@
+                        }
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="mdlError">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="errorDetalle"></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

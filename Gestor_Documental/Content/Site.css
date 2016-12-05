@@ -1,0 +1,212 @@
+﻿/*
+ * Portions based on the template startbootstrap-sb-admin-2, Copyright (c) 2013-2016 Blackrock Digital LLC., see LICENSES.txt.
+ * This file is part of Gestor Documental para la Universidad Autónoma de Guadalajara Campus Tabasco.
+ * Copyright (c) 2016, José Manuel Placeres Castro
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Reescribir algunas clases del sb-admin2 */
+body {
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  #page-wrapper {
+    position: inherit;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+    border-left: 1px solid #ffffff;
+  }
+}
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 51px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: #55191f;
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #681e25 !important;
+    }
+}
+
+#wrapper {
+    color: #ffffff;
+    background-color: #55191f;
+}
+
+.sidebar > a {
+    color: #f0b400;
+}
+
+.sidebar ul li {
+    color: #f0b400;
+    border-bottom: 1px solid #55191f;
+}
+
+.sidebar ul li a.active {
+    color: #f0b400;
+    background-color: #681e25;
+}
+
+.sidebar ul li > a:hover {
+    color: #f0b400;
+    background-color: #681e25;
+}
+
+.dropdown-toggle {
+    background-color: #55191f;
+}
+
+.dropdown-menu {
+    background-color: #55191f;
+}
+
+.dropdown-menu > li > a {
+    color: #f0b400;
+}
+
+.dropdown a:hover,
+.dropdown a:focus {
+    outline: none;
+    background-color: #681e25 !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #f0b400;
+    outline: none;
+    background-color: #681e25 !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #f0b400;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #f0b400;
+    outline: none;
+    background-color: #681e25 !important;
+}
+
+.navbar-default .navbar-brand {
+    color: #f0b400;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #f0b400;
+    outline: none;
+    background-color: #681e25 !important;
+}
+
+.nav > li > a {
+    color: #f0b400;
+}
+
+.nav > a:hover {
+    color: #f0b400;
+    background-color: #681e25;
+}
+
+.nav > a:focus {
+    color: #f0b400;
+    background-color: #681e25;
+}
+
+.navbar-default {
+    background-color: #55191f;
+    border-color: #55191f;
+    color: #f0b400;
+}
+
+.navbar-default > a:hover {
+    color: #f0b400;
+    background-color: #681e25;
+}
+
+.navbar-brand {
+    color: #f0b400;
+}
+
+navbar-brand > a:hover {
+    color: #f0b400;
+    background-color: #681e25;
+}
+
+.navbar-header > a {
+    color: #f0b400;
+}
+
+.negro {
+    color: black;
+}
+
+.rojo {
+    color: red;
+}
+
+.fondoRojoUag {
+    background-color: #55191f;
+}
+
+.amarilloUag {
+    color: #f0b400;
+}
+
+.visible {
+    display: inline;
+}
+
+.invisible {
+    display: none;
+}

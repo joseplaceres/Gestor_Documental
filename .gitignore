@@ -1,0 +1,12 @@
+.*~
+*~
+#*
+*.dll
+*.1
+*.bak
+Gestor_Documental/Temp/*
+Gestor_Documental/App_Data/*
+Gestor_Documental/bin/*
+Gestor_Documental/Properties/PublishProfiles/*
+Gestor_Documental/obj/*
+Thumbs.db

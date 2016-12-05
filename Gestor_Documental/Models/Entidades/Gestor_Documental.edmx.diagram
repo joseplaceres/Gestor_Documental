@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a5d7f5f5f4064e5884a184b0f11f1356" Name="Diagrama1">
+        <EntityTypeShape EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Area" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Documento" Width="1.5" PointX="4.7386250573855939" PointY="7.7998574561438794" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Area" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Departamento" />
+        <EntityTypeShape EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Configuracion" Width="1.5" PointX="9.72642755588816" PointY="7.0324193569982514" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Departamento1" />
+        <EntityTypeShape EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Width="1.5" PointX="1.3043692583704225" PointY="21.15072126181364" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario1" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario2" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario1" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario1" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario2" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario1" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario2" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Area" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Departamento" />
+        <EntityTypeShape EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Grupo" Width="1.5" PointX="5.0796589595636625" PointY="14.373626641171811" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Grupo" />
+        <EntityTypeShape EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.GrupoLector" Width="1.5" PointX="8.25" PointY="12.25" />
+        <AssociationConnector Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_GrupoLector" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

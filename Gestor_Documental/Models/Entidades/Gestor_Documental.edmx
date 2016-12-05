@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GESTOR_DOCUMENTAL_PRUEBAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GESTOR_DOCUMENTAL_PRUEBAModelStoreContainer">
+          <EntitySet Name="Area" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Area" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Configuracion" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Configuracion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Departamento" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Departamento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Documento" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Documento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Grupo" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Grupo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GrupoLector" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Store.GrupoLector" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Area_Departamento" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Area_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Area_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Area_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Area_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Area_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Area_Usuario2" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Area_Usuario2">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Configuracion_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Configuracion_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Configuracion" EntitySet="Configuracion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Configuracion_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Configuracion_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Configuracion" EntitySet="Configuracion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Departamento_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Departamento" EntitySet="Departamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Departamento_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Departamento" EntitySet="Departamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Usuario2" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Departamento_Usuario2">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Departamento" EntitySet="Departamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Area" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Documento_Area">
+            <End Role="Area" EntitySet="Area" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Departamento" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Documento_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Documento_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Documento_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Usuario2" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Documento_Usuario2">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Area" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Usuario_Area">
+            <End Role="Area" EntitySet="Area" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Departamento" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Usuario_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Grupo" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Usuario_Grupo">
+            <End Role="Grupo" EntitySet="Grupo" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_GrupoLector" Association="GESTOR_DOCUMENTAL_PRUEBAModel.Store.FK_Usuario_GrupoLector">
+            <End Role="GrupoLector" EntitySet="GrupoLector" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="IdArea" />
+          </Key>
+          <Property Name="IdArea" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdDepartamento" Type="int" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+          <Property Name="Clave" Type="nvarchar" MaxLength="4" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="IdUsuarioCreacion" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="IdUsuarioEdicion" Type="int" />
+          <Property Name="FechaEdicion" Type="datetime" />
+          <Property Name="IdUsuarioEliminacion" Type="int" />
+          <Property Name="FechaEliminacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Configuracion">
+          <Key>
+            <PropertyRef Name="IdConfiguracion" />
+          </Key>
+          <Property Name="IdConfiguracion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RutaRaiz" Type="nvarchar(max)" />
+          <Property Name="RutaRepositorio" Type="nvarchar(max)" />
+          <Property Name="RutaCopiaTrabajo" Type="nvarchar(max)" />
+          <Property Name="IdUsuarioCreacion" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="IdUsuarioEdicion" Type="int" />
+          <Property Name="FechaEdicion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+          </Key>
+          <Property Name="IdDepartamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+          <Property Name="Clave" Type="nvarchar" MaxLength="4" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="IdUsuarioCreacion" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="IdUsuarioEdicion" Type="int" />
+          <Property Name="FechaEdicion" Type="datetime" />
+          <Property Name="IdUsuarioEliminacion" Type="int" />
+          <Property Name="FechaEliminacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdDocumento" />
+          </Key>
+          <Property Name="IdDocumento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UID" Type="nvarchar(max)" />
+          <Property Name="ContadorUID" Type="int" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+          <Property Name="Descripcion" Type="nvarchar(max)" />
+          <Property Name="Ruta" Type="nvarchar(max)" />
+          <Property Name="RutaEliminado" Type="nvarchar(max)" />
+          <Property Name="IdDepartamento" Type="int" />
+          <Property Name="IdArea" Type="int" />
+          <Property Name="IdUsuarioCreacion" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="IdUsuarioEdicion" Type="int" />
+          <Property Name="FechaEdicion" Type="datetime" />
+          <Property Name="IdUsuarioEliminacion" Type="int" />
+          <Property Name="FechaEliminacion" Type="datetime" />
+          <Property Name="RevisionEliminacion" Type="bigint" />
+          <Property Name="Activo" Type="bit" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="IdGrupo" />
+          </Key>
+          <Property Name="IdGrupo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="GrupoLector">
+          <Key>
+            <PropertyRef Name="IdGrupoLector" />
+          </Key>
+          <Property Name="IdGrupoLector" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Alias" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IdDepartamento" Type="int" />
+          <Property Name="IdArea" Type="int" />
+          <Property Name="IdGrupo" Type="int" />
+          <Property Name="IdGrupoLector" Type="int" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="IdUsuarioCreacion" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="IdUsuarioEdicion" Type="int" />
+          <Property Name="FechaEdicion" Type="datetime" />
+          <Property Name="IdUsuarioEliminacion" Type="int" />
+          <Property Name="FechaEliminacion" Type="datetime" />
+          <Property Name="Salt" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Area_Departamento">
+          <End Role="Departamento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Departamento" Multiplicity="0..1" />
+          <End Role="Area" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="IdDepartamento" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Area_Usuario">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Area" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Area_Usuario1">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Area" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Area_Usuario2">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Area" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdUsuarioEliminacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Configuracion_Usuario">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Configuracion" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Configuracion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Configuracion">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Configuracion_Usuario1">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Configuracion" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Configuracion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Configuracion">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Usuario">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Departamento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Departamento">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Usuario1">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Departamento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Departamento">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Usuario2">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Departamento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Departamento">
+              <PropertyRef Name="IdUsuarioEliminacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Area">
+          <End Role="Area" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Area" Multiplicity="0..1" />
+          <End Role="Documento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area">
+              <PropertyRef Name="IdArea" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Departamento">
+          <End Role="Departamento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Departamento" Multiplicity="0..1" />
+          <End Role="Documento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="IdDepartamento" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Usuario">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Documento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Usuario1">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Documento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Usuario2">
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Documento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdUsuarioEliminacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Area">
+          <End Role="Area" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Area" Multiplicity="0..1" />
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area">
+              <PropertyRef Name="IdArea" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Departamento">
+          <End Role="Departamento" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Departamento" Multiplicity="0..1" />
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="IdDepartamento" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Grupo">
+          <End Role="Grupo" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Grupo" Multiplicity="0..1" />
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupo">
+              <PropertyRef Name="IdGrupo" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdGrupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_GrupoLector">
+          <End Role="GrupoLector" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.GrupoLector" Multiplicity="0..1" />
+          <End Role="Usuario" Type="GESTOR_DOCUMENTAL_PRUEBAModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GrupoLector">
+              <PropertyRef Name="IdGrupoLector" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdGrupoLector" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GESTOR_DOCUMENTAL_PRUEBAModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GESTOR_DOCUMENTAL" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Area" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Area" />
+          <EntitySet Name="Departamento" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" />
+          <EntitySet Name="Documento" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Documento" />
+          <AssociationSet Name="FK_Documento_Area" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Area">
+            <End Role="Area" EntitySet="Area" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Departamento" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <EntitySet Name="Configuracion" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Configuracion" />
+          <AssociationSet Name="FK_Area_Departamento1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Departamento1">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(GESTOR_DOCUMENTAL_PRUEBAModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Usuario" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" />
+          <AssociationSet Name="FK_Area_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Area_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Area_Usuario2" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario2">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Configuracion_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Configuracion" EntitySet="Configuracion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Configuracion_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Configuracion" EntitySet="Configuracion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Departamento" EntitySet="Departamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Departamento" EntitySet="Departamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Usuario2" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario2">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Departamento" EntitySet="Departamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Usuario" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Usuario1" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documento_Usuario2" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario2">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Documento" EntitySet="Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Area" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Area">
+            <End Role="Area" EntitySet="Area" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Departamento" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <EntitySet Name="Grupo" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.Grupo" />
+          <AssociationSet Name="FK_Usuario_Grupo" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Grupo">
+            <End Role="Grupo" EntitySet="Grupo" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <EntitySet Name="GrupoLector" EntityType="GESTOR_DOCUMENTAL_PRUEBAModel.GrupoLector" />
+          <AssociationSet Name="FK_Usuario_GrupoLector" Association="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_GrupoLector">
+            <End Role="GrupoLector" EntitySet="GrupoLector" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="IdArea" />
+          </Key>
+          <Property Name="IdArea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdDepartamento" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="IdUsuarioCreacion" Type="Int32" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="IdUsuarioEdicion" Type="Int32" />
+          <Property Name="FechaEdicion" Type="DateTime" Precision="3" />
+          <Property Name="IdUsuarioEliminacion" Type="Int32" />
+          <Property Name="FechaEliminacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Documento" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Area" FromRole="Area" ToRole="Documento" />
+          <NavigationProperty Name="Departamento" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Departamento1" FromRole="Area" ToRole="Departamento" />
+          <NavigationProperty Name="Usuario" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario" FromRole="Area" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario1" FromRole="Area" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario2" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario2" FromRole="Area" ToRole="Usuario" />
+          <Property Type="String" Name="Clave" MaxLength="4" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Usuario3" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Area" FromRole="Area" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+          </Key>
+          <Property Name="IdDepartamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="IdUsuarioCreacion" Type="Int32" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="IdUsuarioEdicion" Type="Int32" />
+          <Property Name="FechaEdicion" Type="DateTime" Precision="3" />
+          <Property Name="IdUsuarioEliminacion" Type="Int32" />
+          <Property Name="FechaEliminacion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Documento" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Departamento" FromRole="Departamento" ToRole="Documento" />
+          <NavigationProperty Name="Area" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Departamento1" FromRole="Departamento" ToRole="Area" />
+          <NavigationProperty Name="Usuario" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario" FromRole="Departamento" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario1" FromRole="Departamento" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario2" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario2" FromRole="Departamento" ToRole="Usuario" />
+          <Property Type="String" Name="Clave" MaxLength="4" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Usuario3" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Departamento" FromRole="Departamento" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdDocumento" />
+          </Key>
+          <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Ruta" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IdDepartamento" />
+          <Property Type="Int32" Name="IdArea" />
+          <Property Type="Int32" Name="IdUsuarioCreacion" />
+          <Property Type="DateTime" Name="FechaCreacion" Precision="3" />
+          <Property Type="Int32" Name="IdUsuarioEdicion" />
+          <Property Type="DateTime" Name="FechaEdicion" Precision="3" />
+          <Property Type="Int32" Name="IdUsuarioEliminacion" />
+          <Property Type="DateTime" Name="FechaEliminacion" Precision="3" />
+          <NavigationProperty Name="Area" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Area" FromRole="Documento" ToRole="Area" />
+          <NavigationProperty Name="Departamento" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Departamento" FromRole="Documento" ToRole="Departamento" />
+          <Property Type="Boolean" Name="Activo" />
+          <Property Type="String" Name="RutaEliminado" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="RevisionEliminacion" />
+          <NavigationProperty Name="Usuario" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario" FromRole="Documento" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario1" FromRole="Documento" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario2" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario2" FromRole="Documento" ToRole="Usuario" />
+          <Property Type="String" Name="UID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ContadorUID" />
+        </EntityType>
+        <Association Name="FK_Documento_Area">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Area" Role="Area" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Documento" Role="Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area">
+              <PropertyRef Name="IdArea" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Departamento">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" Role="Departamento" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Documento" Role="Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="IdDepartamento" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Configuracion">
+          <Key>
+            <PropertyRef Name="IdConfiguracion" />
+          </Key>
+          <Property Type="Int32" Name="IdConfiguracion" Nullable="false" />
+          <Property Type="String" Name="RutaRepositorio" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RutaCopiaTrabajo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IdUsuarioCreacion" />
+          <Property Type="DateTime" Name="FechaCreacion" Precision="3" />
+          <Property Type="Int32" Name="IdUsuarioEdicion" />
+          <Property Type="DateTime" Name="FechaEdicion" Precision="3" />
+          <NavigationProperty Name="Usuario" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario" FromRole="Configuracion" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario1" FromRole="Configuracion" ToRole="Usuario" />
+          <Property Type="String" Name="RutaRaiz" MaxLength="Max" FixedLength="false" Unicode="true" />
+          </EntityType>
+        <Association Name="FK_Area_Departamento1">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" Role="Departamento" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Area" Role="Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="IdDepartamento" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Alias" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IdDepartamento" />
+          <Property Type="Int32" Name="IdArea" />
+          <Property Type="Int32" Name="IdGrupo" />
+          <Property Type="Boolean" Name="Activo" />
+          <Property Type="Int32" Name="IdUsuarioCreacion" />
+          <Property Type="DateTime" Name="FechaCreacion" Precision="3" />
+          <Property Type="Int32" Name="IdUsuarioEdicion" />
+          <Property Type="DateTime" Name="FechaEdicion" Precision="3" />
+          <Property Type="Int32" Name="IdUsuarioEliminacion" />
+          <Property Type="DateTime" Name="FechaEliminacion" Precision="3" />
+          <Property Type="String" Name="Salt" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Area1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario" FromRole="Usuario" ToRole="Area" />
+          <NavigationProperty Name="Area2" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario1" FromRole="Usuario" ToRole="Area" />
+          <NavigationProperty Name="Area3" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Area_Usuario2" FromRole="Usuario" ToRole="Area" />
+          <NavigationProperty Name="Configuracion" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario" FromRole="Usuario" ToRole="Configuracion" />
+          <NavigationProperty Name="Configuracion1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Configuracion_Usuario1" FromRole="Usuario" ToRole="Configuracion" />
+          <NavigationProperty Name="Departamento1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario" FromRole="Usuario" ToRole="Departamento" />
+          <NavigationProperty Name="Departamento2" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario1" FromRole="Usuario" ToRole="Departamento" />
+          <NavigationProperty Name="Departamento3" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Departamento_Usuario2" FromRole="Usuario" ToRole="Departamento" />
+          <NavigationProperty Name="Documento" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario" FromRole="Usuario" ToRole="Documento" />
+          <NavigationProperty Name="Documento1" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario1" FromRole="Usuario" ToRole="Documento" />
+          <NavigationProperty Name="Documento2" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Documento_Usuario2" FromRole="Usuario" ToRole="Documento" />
+          <NavigationProperty Name="Area" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Area" FromRole="Usuario" ToRole="Area" />
+          <NavigationProperty Name="Departamento" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Departamento" FromRole="Usuario" ToRole="Departamento" />
+          <NavigationProperty Name="Grupo" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Grupo" FromRole="Usuario" ToRole="Grupo" />
+          <Property Type="Int32" Name="IdGrupoLector" />
+          <NavigationProperty Name="GrupoLector" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_GrupoLector" FromRole="Usuario" ToRole="GrupoLector" />
+          </EntityType>
+        <Association Name="FK_Area_Usuario">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Area" Role="Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Area_Usuario1">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Area" Role="Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Area_Usuario2">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Area" Role="Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="IdUsuarioEliminacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Configuracion_Usuario">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Configuracion" Role="Configuracion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Configuracion">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Configuracion_Usuario1">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Configuracion" Role="Configuracion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Configuracion">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Usuario">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" Role="Departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Departamento">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Usuario1">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" Role="Departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Departamento">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Usuario2">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" Role="Departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Departamento">
+              <PropertyRef Name="IdUsuarioEliminacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Usuario">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Documento" Role="Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdUsuarioCreacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Usuario1">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Documento" Role="Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdUsuarioEdicion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documento_Usuario2">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Documento" Role="Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Documento">
+              <PropertyRef Name="IdUsuarioEliminacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Area">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Area" Role="Area" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Area">
+              <PropertyRef Name="IdArea" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Departamento">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento" Role="Departamento" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="IdDepartamento" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="IdGrupo" />
+          </Key>
+          <Property Type="Int32" Name="IdGrupo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Usuario" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_Grupo" FromRole="Grupo" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FK_Usuario_Grupo">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Grupo" Role="Grupo" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupo">
+              <PropertyRef Name="IdGrupo" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdGrupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="GrupoLector">
+          <Key>
+            <PropertyRef Name="IdGrupoLector" />
+          </Key>
+          <Property Type="Int32" Name="IdGrupoLector" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Usuario" Relationship="GESTOR_DOCUMENTAL_PRUEBAModel.FK_Usuario_GrupoLector" FromRole="GrupoLector" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FK_Usuario_GrupoLector">
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.GrupoLector" Role="GrupoLector" Multiplicity="0..1" />
+          <End Type="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GrupoLector">
+              <PropertyRef Name="IdGrupoLector" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdGrupoLector" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GESTOR_DOCUMENTAL_PRUEBAModelStoreContainer" CdmEntityContainer="GESTOR_DOCUMENTAL">
+          <EntitySetMapping Name="Area">
+            <EntityTypeMapping TypeName="GESTOR_DOCUMENTAL_PRUEBAModel.Area">
+              <MappingFragment StoreEntitySet="Area">
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="IdUsuarioCreacion" ColumnName="IdUsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuarioEdicion" ColumnName="IdUsuarioEdicion" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="IdUsuarioEliminacion" ColumnName="IdUsuarioEliminacion" />
+                <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departamento">
+            <EntityTypeMapping TypeName="GESTOR_DOCUMENTAL_PRUEBAModel.Departamento">
+              <MappingFragment StoreEntitySet="Departamento">
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="IdUsuarioCreacion" ColumnName="IdUsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuarioEdicion" ColumnName="IdUsuarioEdicion" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="IdUsuarioEliminacion" ColumnName="IdUsuarioEliminacion" />
+                <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documento">
+            <EntityTypeMapping TypeName="GESTOR_DOCUMENTAL_PRUEBAModel.Documento">
+              <MappingFragment StoreEntitySet="Documento">
+                <ScalarProperty Name="ContadorUID" ColumnName="ContadorUID" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="RevisionEliminacion" ColumnName="RevisionEliminacion" />
+                <ScalarProperty Name="RutaEliminado" ColumnName="RutaEliminado" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
+                <ScalarProperty Name="IdUsuarioEliminacion" ColumnName="IdUsuarioEliminacion" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="IdUsuarioEdicion" ColumnName="IdUsuarioEdicion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuarioCreacion" ColumnName="IdUsuarioCreacion" />
+                <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+                <ScalarProperty Name="Ruta" ColumnName="Ruta" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Configuracion">
+            <EntityTypeMapping TypeName="GESTOR_DOCUMENTAL_PRUEBAModel.Configuracion">
+              <MappingFragment StoreEntitySet="Configuracion">
+                <ScalarProperty Name="RutaRaiz" ColumnName="RutaRaiz" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="IdUsuarioEdicion" ColumnName="IdUsuarioEdicion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuarioCreacion" ColumnName="IdUsuarioCreacion" />
+                <ScalarProperty Name="RutaCopiaTrabajo" ColumnName="RutaCopiaTrabajo" />
+                <ScalarProperty Name="RutaRepositorio" ColumnName="RutaRepositorio" />
+                <ScalarProperty Name="IdConfiguracion" ColumnName="IdConfiguracion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="GESTOR_DOCUMENTAL_PRUEBAModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="IdGrupoLector" ColumnName="IdGrupoLector" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
+                <ScalarProperty Name="IdUsuarioEliminacion" ColumnName="IdUsuarioEliminacion" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="IdUsuarioEdicion" ColumnName="IdUsuarioEdicion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdUsuarioCreacion" ColumnName="IdUsuarioCreacion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+                <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Alias" ColumnName="Alias" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grupo">
+            <EntityTypeMapping TypeName="GESTOR_DOCUMENTAL_PRUEBAModel.Grupo">
+              <MappingFragment StoreEntitySet="Grupo">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GrupoLector">
+            <EntityTypeMapping TypeName="GESTOR_DOCUMENTAL_PRUEBAModel.GrupoLector">
+              <MappingFragment StoreEntitySet="GrupoLector">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdGrupoLector" ColumnName="IdGrupoLector" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
